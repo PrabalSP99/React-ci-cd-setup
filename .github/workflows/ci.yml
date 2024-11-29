@@ -15,6 +15,13 @@ jobs:
                with:
                   node-version: 18
              - name: "check node version"
-               run: "node --version"      
+               run: node --version     
                
-            
+             - name: "Clone the respository"
+               uses: actions/checkout@v2
+             
+             - name: "Install Dependecies"
+               uses: npm install
+             
+             - name: "List directory"
+               uses: ls 
